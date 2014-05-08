@@ -43,7 +43,6 @@
       </section>
 
       <section data-background="/img/angular.fw.png">
-        <h2>AngularJS</h2>
         <blockquote>
           Brian, why aren't you talking about Angular?
           <footer>–Someone in the audience probably</footer>
@@ -62,48 +61,52 @@
       <section>
         <h2>Modules vs. Frameworks</h2>
         <p><code>false</code> dichotomy</p>
-
-        <p>What is a framework anyway?</p>
       </section>
 
       <section>
-        <p>Angular 1.x is super modular</p>
-        <p>Started ~5 years ago before we had nice tools and module systems.
-          As a result Angular:</p>
+        <h2>Angular 1.x is very modular</h2>
+        <p>100+ distinct components that do one thing</p>
+
+        <p>Because Angular started ~5 years ago before we had nice tools and module systems, it:</p>
         <ul>
           <li>has its own module system</li>
           <li>exports a single script</li>
+          <li>inconvienient to use just part of Angular</li>
         </ul>
       </section>
 
       <section>
-        <h2>MV*</h2>
+        <h2>MVC? Nope, MVW.</h2>
         <p>Angular is a strictly <em>Model View Whatever</em>.</p>
       </section>
 
       <section>
         <h2>What is Angular?</h2>
         <p>Angular is a <em>framewhatever</em> and <em>moduwhatever</em> for building web apps.</p>
+        <p>it's a tool to get the job done</p>
       </section>
 
       <section>
         <h2>AngularJS 2.0</h2>
         <ul>
-          <li>Composed of many small modules</li>
-          <li>Written as ES6 Modules</li>
+          <li>Composed of many small ES6 Modules</li>
           <li>Transpiled to ES5 (via Traceur)</li>
           <li>Packaged as CJS and AMD</li>
-          <li>Everyone wins</li>
         </ul>
+        <p>You can use as much or as little of Angular as you want.</p>
+        <p>Published on npm. Works with Browserify, RequireJS, or whatever.</p>
+        <p><em>Everyone wins</em></p>
       </section>
 
       <section>
-        <h2>AngularJS 2.0</h2>
-        <p>the parts</p>
+        <h2>AngularJS 2.0 – the parts</h2>
         <ul>
-          <li>Change detection – Watchtower</li>
-          <li>Templating</li>
+          <li>Dependency Injection – <a href="https://github.com/angular/di.js">di.js</a></li>
+          <li>Change detection – <a href="https://github.com/angular/watchtower.js">Watchtower.js</a></li>
+          <li>Expression parser – <a href="https://github.com/angular/expressionist.js">Expressionist.js</a></li>
+          <li><a href="https://github.com/angular/templating">Templating</a></li>
           <li>Routing</li>
+          <li>Etc.</li>
         </ul>
       </section>
 
@@ -131,8 +134,51 @@
       </section>
 
       <section>
+        <h2>What is Zone.js?</h2>
+        <p>Stand-alone ES5 library (~500 LOC)</p>
+        <p>Implements a new primative – Zone – for browsers</p>
+      </section>
+
+      <section>
+        <h2>Zones aren't new</h2>
+        <ul>
+          <li><a href="https://www.dartlang.org/articles/zones/">Zones in Dart</a></li>
+          <li>Domains in Node</li>
+          <li>Async Listeners in Node</li>
+        </ul>
+        <p>Zone.js is a generalized solution; lets you compose behaviors</p>
+        <p>There's also <a href="http://strongloop.com/strongblog/comparing-node-js-promises-trycatch-zone-js-angular/"><code>zone</code></a> (npm module), which implements zones for node.</p>
+      </section>
+
+      <section>
         <h2>Explaining Zones</h2>
         <a href="https://docs.google.com/presentation/d/1yeM5RipDkwKpwj0zzRcMJn66l0NGbz2xd_aFxwe7SIE/edit#slide=id.g2a1818f36_044">check it</a>
+      </section>
+
+      <section>
+        <h2>How can I use Zones?</h2>
+        <ol>
+          <li>Debugging</li>
+          <li>Testing/mocking</li>
+          <li>Profiling</li>
+          <li>And More</li>
+        </ol>
+      </section>
+
+      <section>
+        <h1>Demo</h1>
+      </section>
+
+      <section>
+        <h2>A Zone is a behavior for a certain execution context</h2>
+      </section>
+
+      <section>
+        <h2>Zone.js ships with these zones:</h2>
+        <ul>
+          <li>Counting Zone – lets you know when all async tasks are done</li>
+          <li>Long Stack Trace Zone – keeps track of the call stack across async tasks</li>
+        </ul>
       </section>
 
       <section>
@@ -142,23 +188,17 @@
       </section>
 
       <section>
-        <h2>How does Angular use Zones?</h2>
+        <h2>If you've used Angular...</h2>
         <p>In AngularJS 1.x, you had to call <code>$rootScope.$apply</code> if you
           changed some model outside of Angular's lifecycle. Now you won't have to!</p>
       </section>
 
       <section>
         <h2>Source Code and Demos:</h2>
-        <a href="http://github.com/angular/zone.js">http://github.com/angular/zone.js</a>
-      </section>
-
-      <section>
-        <h2>The idea for zones isn't new</h2>
-        <ul>
-          <li><a href="https://www.dartlang.org/articles/zones/">Zones in Dart</a></li>
-          <li>Domains in Node</li>
-          <li>Async Listeners in Node</li>
-        </ul>
+        <p><a href="http://github.com/angular/zone.js">http://github.com/angular/zone.js</a></p>
+        <br><br>
+        <h2>Slides:</h2>
+        <p><a href="https://github.com/btford/brian-talks-more-about-zones">https://github.com/btford/brian-talks-more-about-zones</a></p>
       </section>
 
       <section>
